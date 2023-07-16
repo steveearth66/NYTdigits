@@ -82,7 +82,7 @@ while target!=0:
     for j in range(QTY):
         msg = "option #"+str(j+1)+": "
         nums[j]=int(input(msg))
-    ans=search(list(prod(OPS,repeat=5)), list(perm(nums)), list(genericTrees), target)
+    ans=search(list(prod(OPS,repeat=QTY-1)), list(perm(nums)), list(genericTrees), target)
     if isinstance(ans, str):
         print(ans)
     else:
